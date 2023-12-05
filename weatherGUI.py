@@ -54,5 +54,14 @@ class WeatherGui:
     def setUpWeatherFrame(self):
         self.frame = ctk.CTkFrame(self.root,border_width=1)
         self.frame.pack(pady=20,padx=60,fill="both",expand=True)
+        self.weatherImage = tk.label(self.frame,anchor="w")
+        self.location = tk.Label(self.frame, text="Location:", background="gray13", foreground="white", anchor="w")
+        self.error = tk.Label(self.frame, text="Error: Invalid City or Timeout! Try Again.", background="gray13",foreground="white", anchor="w")
+        self.timeZone = tk.Label(self.frame, text="Timezone:", background="gray13", foreground="white", anchor="w")
+        self.localTime = tk.Label(self.frame, text="Local Time:", background="gray13", foreground="white", anchor="w")
+        self.temperature = tk.Label(self.frame, text="Temperature:", background="gray13", foreground="white",anchor="w")
+        self.status = tk.Label(self.frame, text="Status:", background="gray13", foreground="white", anchor="w")
+        self.precipitation = tk.Label(self.frame, text="Precipitation:", background="gray13", foreground="white",anchor="w")
+        self.Humidity = tk.Label(self.frame, text="Humidity:", background="gray13", foreground="white", anchor="w")
 
 
