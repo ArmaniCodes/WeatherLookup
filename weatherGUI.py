@@ -18,14 +18,19 @@ class WeatherGui:
         self.root.mainloop()
 
 
+
+    #Devisualize error Box and grab parsed info
+    #If parsed Info then visualize and apply Info
     def searchCity(self):
-        city = self.city_input.get()
+        self.error.grid_forgot()
+        city = self.city_input.get() #This grabs the user Input from the textBox
         info = getCityWeather(city)
         if info is None:
-            print("Error")
+            self.devisualizeItems()
             return
-        else:
-            print(info)
+        if not self.visualized:
+            self.visualizeItems()
+        self.applyInfo(info)
 
     #Setup the Window, Title, And Search Button
     def setUpGui(self):
