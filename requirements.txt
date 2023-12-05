@@ -1,0 +1,5 @@
+packaging
+Tkinter
+customtkinter
+Pillow
+Requests
