@@ -51,10 +51,12 @@ class WeatherGui:
         self.setUpWeatherFrame()
 
     #Sets up the frame that has the weather information
+    #anchor = "w" makes it so it stays attached on X
+    #We don't pack (visualize) them yet. Only visualize once a city is searched
     def setUpWeatherFrame(self):
         self.frame = ctk.CTkFrame(self.root,border_width=1)
         self.frame.pack(pady=20,padx=60,fill="both",expand=True)
-        self.weatherImage = tk.label(self.frame,anchor="w")
+        self.weatherImage = tk.Label(self.frame,anchor="w")
         self.location = tk.Label(self.frame, text="Location:", background="gray13", foreground="white", anchor="w")
         self.error = tk.Label(self.frame, text="Error: Invalid City or Timeout! Try Again.", background="gray13",foreground="white", anchor="w")
         self.timeZone = tk.Label(self.frame, text="Timezone:", background="gray13", foreground="white", anchor="w")
@@ -63,5 +65,6 @@ class WeatherGui:
         self.status = tk.Label(self.frame, text="Status:", background="gray13", foreground="white", anchor="w")
         self.precipitation = tk.Label(self.frame, text="Precipitation:", background="gray13", foreground="white",anchor="w")
         self.Humidity = tk.Label(self.frame, text="Humidity:", background="gray13", foreground="white", anchor="w")
+
 
 
