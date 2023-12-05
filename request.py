@@ -41,6 +41,8 @@ def checkResponse(response):
             "Humidity": data["current"]["humidity"],
             "Image": data["current"]["weather_icons"][0]
         }
+        #Update image so that it is usable for TKinter
+        updateImage(Layout)
 
     return Layout
 
