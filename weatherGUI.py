@@ -88,3 +88,17 @@ class WeatherGui:
         for i in self.frame.winfo_children():
             i.grid_forget()
         self.error.grid(row=1, column=0, padx=15, pady=2, sticky="w")
+
+
+
+    #Takes the info from the parsed Json response and uses it to apply it
+    def applyInfo(self,info):
+        self.weatherImage.config(image=info["Image"])
+        self.weatherImage.image = info["Image"]
+        self.location.config(text="Location: \t" + info["Location"])
+        self.timeZone.config(text="Timezone: \t" + info["Timezone"])
+        self.localTime.config(text="Local Time: \t" + info["LocalTime"])
+        self.temperature.config(text="Temperature: \t" + str(info["Temperature"]) + " Celcius")
+        self.status.config(text="Status: \t\t" + info["Status"])
+        self.precipitation.config(text="Precipitation: \t" + str(info["Precipitation"]))
+        self.Humidity.config(text="Humidity: \t" + str(info["Humidity"]))
