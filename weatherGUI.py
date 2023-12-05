@@ -19,8 +19,13 @@ class WeatherGui:
 
 
     def searchCity(self):
-        pass
-
+        city = self.city_input.get()
+        info = getCityWeather(city)
+        if info is None:
+            print("Error")
+            return
+        else:
+            print(info)
 
     #Setup the Window, Title, And Search Button
     def setUpGui(self):
