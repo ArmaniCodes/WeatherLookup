@@ -10,11 +10,12 @@ params = {  f"access_key" : {apiK} ,
 
 def checkResponse(response):
     #if the string success appears in the Json we know it failed.
+    print(response.json())
     if "success" in response.json() or response.status_code != 200:
         return None
 
     #if successful parse info and return it as a dictionary
-    if response.stauts_code == 200 and "success" not in response:
+    if response.status_code == 200 and "success" not in response:
         data = response.json()
         Layout = {
             "Location" : data["location"]["name"] + "," + data["location"]["country"],
