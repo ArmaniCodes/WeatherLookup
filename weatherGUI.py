@@ -18,6 +18,7 @@ class WeatherGui:
         self.root.mainloop()
 
 
+    #Setup the Window, Title, And Search Button
     def setUpGui(self):
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("dark-blue")
@@ -25,5 +26,10 @@ class WeatherGui:
         self.root.title("Weather Lookup")
         self.root.geometry('500x400')
         self.root.wm_iconbitmap("3721962.ico")
+
+        guiTitle = ctk.CTkLabel(self.root,text="Weather Lookup", font=("Arial",15))
+        guiTitle.pack()
+
+
 
 
