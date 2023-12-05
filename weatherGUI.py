@@ -24,6 +24,6 @@ class WeatherGui:
         self.root.resizable(False,False)
         self.root.title("Weather Lookup")
         self.root.geometry('500x400')
-
+        self.root.wm_iconbitmap("3721962.ico")
 
 
