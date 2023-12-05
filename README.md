@@ -7,8 +7,11 @@ Pillow, TKinter, customtkinter, Requests,Packaging
 Run the pip install -r requirements.txt
 
 #APIKEY
-To use this program you need to signup on WeatherStack.com to retrieve a free API KEY. Once you signup create a config.py file and place the APIKEY in the file.
+To use this program you need to signup on WeatherStack.com to retrieve a free API KEY. Once you signup create a config.py file in the project directory with apiKey = {yourKey} inside.
 You can also just place the APIKEY inline in the request.py file.
 
 #Usage
 Simply type the name of the city in the textbox and click the search button to retrieve the weather information. 
+
+
+![image](https://github.com/ArmaniCodes/WeatherLookup/assets/103855175/7d96b105-f054-4ffa-8e57-ba24ee0705bc)
