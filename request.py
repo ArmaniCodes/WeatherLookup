@@ -28,7 +28,7 @@ def checkResponse(response):
             "Image": data["current"]["weather_icons"][0]
         }
 
-    return layout
+    return Layout
 
 def getCityWeather(City):
     params["query"] = City
