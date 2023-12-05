@@ -10,8 +10,17 @@ params = {  f"access_key" : {apiK} ,
 
 
 #Update image because the API returns the status image as a link which is not compatible with TKinter
+#Resize image to prevent layout deformation
 def updateImage(Layout):
     imageResponse = requests.get(Layout["Image"])
+    if imageResponse.status_code == 200:
+        image_data = BytesIO(imageResponse.content)
+        image = Image.open(image_data)
+        image = image.resize((30, 30))
+        photo = ImageTk.PhotoImage(image)
+        Layout["Image"] = photo  #Update from Link to a usable Photo for Tkinter
+    else:
+        Layout["Image"] = None
 
 def checkResponse(response):
     #if the string success appears in the Json we know it failed.
