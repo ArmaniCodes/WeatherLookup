@@ -1,12 +1,17 @@
 import requests
 import config
-
+from io import BytesIO
+from PIL import Image, ImageTk
 
 apiK = config.apiKey
 apiURL = "http://api.weatherstack.com/current"
 params = {  f"access_key" : {apiK} ,
             "query":""}
 
+
+#Update image because the API returns the status image as a link which is not compatible with TKinter
+def updateImage(Layout):
+    imageResponse = requests.get(Layout["Image"])
 
 def checkResponse(response):
     #if the string success appears in the Json we know it failed.
