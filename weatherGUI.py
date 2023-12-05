@@ -81,3 +81,10 @@ class WeatherGui:
         self.Humidity.grid(row=8, column=0, padx=15, pady=2, sticky="w")
 
 
+    #Devisualizes items for when there is an error
+    #Loops through the children of the Frame and grid_forgets it which devisualizes it
+    def devisualizeItems(self):
+        self.visualized = False
+        for i in self.frame.winfo_children():
+            i.grid_forget()
+        self.error.grid(row=1, column=0, padx=15, pady=2, sticky="w")
