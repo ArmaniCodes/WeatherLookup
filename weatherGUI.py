@@ -67,4 +67,17 @@ class WeatherGui:
         self.Humidity = tk.Label(self.frame, text="Humidity:", background="gray13", foreground="white", anchor="w")
 
 
+    #Visualizes items in frame when a correct city is searched!
+    #Using .grid instead of .pack to ensure a tidy layout
+    def visualizeItems(self):
+        self.visualized = True
+        self.weatherImage.grid(row=0, column=0, padx=5, pady=2, sticky="w")
+        self.location.grid(row=1, column=0, padx=15, pady=2, sticky="w")
+        self.timeZone.grid(row=2, column=0, padx=15, pady=2, sticky="w")
+        self.localTime.grid(row=3, column=0, padx=15, pady=2, sticky="w")
+        self.temperature.grid(row=4, column=0, padx=15, pady=2, sticky="w")
+        self.status.grid(row=6, column=0, padx=15, pady=2, sticky="w")
+        self.precipitation.grid(row=7, column=0, padx=15, pady=2, sticky="w")
+        self.Humidity.grid(row=8, column=0, padx=15, pady=2, sticky="w")
+
 
