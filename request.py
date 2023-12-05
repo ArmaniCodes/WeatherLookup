@@ -24,7 +24,7 @@ def updateImage(Layout):
 
 def checkResponse(response):
     #if the string success appears in the Json we know it failed.
-    print(response.json())
+
     if "success" in response.json() or response.status_code != 200:
         return None
 
