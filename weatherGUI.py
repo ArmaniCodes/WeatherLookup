@@ -48,5 +48,11 @@ class WeatherGui:
 
         city_entry.pack()
         self.city_entryb.pack(pady=10)
+        self.setUpWeatherFrame()
+
+    #Sets up the frame that has the weather information
+    def setUpWeatherFrame(self):
+        self.frame = ctk.CTkFrame(self.root,border_width=1)
+        self.frame.pack(pady=20,padx=60,fill="both",expand=True)
 
 
