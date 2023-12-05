@@ -18,6 +18,10 @@ class WeatherGui:
         self.root.mainloop()
 
 
+    def searchCity(self):
+        pass
+
+
     #Setup the Window, Title, And Search Button
     def setUpGui(self):
         ctk.set_appearance_mode("dark")
