@@ -22,7 +22,7 @@ class WeatherGui:
     #Devisualize error Box and grab parsed info
     #If parsed Info then visualize and apply Info
     def searchCity(self):
-        self.error.grid_forgot()
+        self.error.grid_forget()
         city = self.city_input.get() #This grabs the user Input from the textBox
         info = getCityWeather(city)
         if info is None:
