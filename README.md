@@ -13,7 +13,7 @@ Pillow, customtkinter, Requests,Packaging. To download them simply run:
 pip install -r requirements.txt
 ```
 ## APIKEY
-To use this program you need to signup on WeatherStack.com to retrieve a free API KEY. Once you signup, create a config.py and place
+To use this program you need to signup on WeatherStack.com to retrieve a free API KEY. Once you signup head to your dashboard where you will locate your free API key. Then create a file named config.py in the project directory and place
 ```sh
 apiKey = "YOURKEY"
 ```
