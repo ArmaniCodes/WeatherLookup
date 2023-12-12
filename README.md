@@ -20,7 +20,7 @@ apiKey = "YOURKEY"
 Inside! Alternatively you can just place your apikey inline in request.py
 
 ## Usage
-Simply type the name of the city in the textbox and click the search button to retrieve the weather information. Misspelled the name of the city? No worries the API will most likely know which city you meant.
+Simply type the name of the city in the textbox and click the search button to retrieve the weather information. Misspelled the name of the city? No worries, the API will most likely know which city you meant.
 
 ## Preview
 ![image](https://github.com/ArmaniCodes/WeatherLookup/assets/103855175/7d96b105-f054-4ffa-8e57-ba24ee0705bc)
